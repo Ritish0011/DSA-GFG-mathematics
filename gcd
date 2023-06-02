@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int a=7;
+		int b=13;
+		int result = Math.min(a,b);
+		while(result>0){
+		    if((a%result==0)&&(b%result==0)){
+		        System.out.println(result);
+		        break;
+		    }
+		    else{
+		        result--;
+		    }
+		}
+		System.out.println(gcd(100,200));
+	}
+	static int gcd(int a, int b){
+	    if(b==0){
+	        return a;
+	    }
+	    else{
+	        return gcd(a,b%a);
+	    }
+	}
+}
